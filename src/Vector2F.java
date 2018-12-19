@@ -15,6 +15,7 @@ public class Vector2F {
         this.y = y;
     }
 
+    // for all of these functions, you are allowed to use java Math builtins only.
     // TODO: implement this
     public Vector2F subtract(Vector2F subtrahend) {
         // return this - subtrahend
