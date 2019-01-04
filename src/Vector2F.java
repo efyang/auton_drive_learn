@@ -19,18 +19,19 @@ public class Vector2F {
     // TODO: implement this
     public Vector2F subtract(Vector2F subtrahend) {
         // return this - subtrahend
-        return null;
+        Vector2F result = new Vector2F(this.x - subtrahend.x, this.y - subtrahend.y);
+        return result;
     }
 
     // TODO: implement this
     public float getAngle() {
         // get the angle CCW from the +x axis
-        return 0;
+        return (float) Math.atan(this.x/this.y);
     }
 
     // TODO: implement this
     public float getMagnitude() {
         // get the magnitude of the vector
-        return 0;
+        return (float) Math.sqrt(this.x * this.x + this.y * this.y);
     }
 }
