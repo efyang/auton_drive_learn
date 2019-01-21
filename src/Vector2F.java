@@ -15,22 +15,18 @@ public class Vector2F {
         this.y = y;
     }
 
-    // for all of these functions, you are allowed to use java Math builtins only.
-    // TODO: implement this
+    //Returns a new Vector with the imputed x and y subtracted from the stored ones
     public Vector2F subtract(Vector2F subtrahend) {
-        // return this - subtrahend
-        return null;
+        return Vector2F(x - subtrahend.getX(),y - subtrahend.getY());
     }
 
-    // TODO: implement this
+    //Used Arctan to find the angle in polar (so from the +x axis)
     public float getAngle() {
-        // get the angle CCW from the +x axis
-        return 0;
+        return Math.atan2(y,x);
     }
 
-    // TODO: implement this
+    //Used Pythag
     public float getMagnitude() {
-        // get the magnitude of the vector
-        return 0;
+        return Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
     }
 }
