@@ -7,9 +7,16 @@ public class Robot {
         moveTo(new Vector2F(x, y), heading);
     }
 
-    // TODO: implement this
     public void moveTo(Vector2F targetPosition, float targetHeading) {
-        // move to the given position and heading
-        // you should only have to use things that are within these files
+
+        //Setting up rotation by subtracting their angles ccw from +x and normalizing it
+        float angleDif = ExtendedMath.normalizeRadians(targetHeading - navigationalState.getHeading());
+
+        //Seting up distance by subtracting the vectors, then finding the magnitude of the resulting vector
+        float distDif = targetPosition.subtract(navigationalState.getPosition()).getMagnitude();
+
+        //Making the drivebase actually implement it
+        drivebase.rotate(angleDif);
+        drivebase.forwardDrive(distDif);
     }
 }
